@@ -1,0 +1,5 @@
+if(EXISTS "/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/dim_test[1]_tests.cmake")
+  include("/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/dim_test[1]_tests.cmake")
+else()
+  add_test(dim_test_NOT_BUILT dim_test_NOT_BUILT)
+endif()

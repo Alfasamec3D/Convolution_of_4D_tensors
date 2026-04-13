@@ -1,0 +1,5 @@
+add_test([=[ConvNaiveTest.BasicCase]=]  [==[/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/convolution_test]==] [==[--gtest_filter=ConvNaiveTest.BasicCase]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ConvNaiveTest.BasicCase]=]  PROPERTIES WORKING_DIRECTORY [==[/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[ConvIm2ColTest.BasicCase]=]  [==[/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/convolution_test]==] [==[--gtest_filter=ConvIm2ColTest.BasicCase]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ConvIm2ColTest.BasicCase]=]  PROPERTIES WORKING_DIRECTORY [==[/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  convolution_test_TESTS ConvNaiveTest.BasicCase ConvIm2ColTest.BasicCase)

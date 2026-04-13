@@ -1,0 +1,5 @@
+if(EXISTS "/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/gemm_test[1]_tests.cmake")
+  include("/home/ivan/Рабочий стол/Media/Programs/SberConvolution_of_4D_tensors/build/tests/gemm_test[1]_tests.cmake")
+else()
+  add_test(gemm_test_NOT_BUILT gemm_test_NOT_BUILT)
+endif()
