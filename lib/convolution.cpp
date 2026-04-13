@@ -10,7 +10,7 @@ using namespace Dim;
 
 Linalg::Tensor<4> Convolution::conv_naive(const Linalg::Tensor<4>& input,
                                           const Linalg::Tensor<4>& kernel) {
-  if (kernel.dimension(0) != kernel.dimension(3))
+  if (kernel.dimension(2) != kernel.dimension(3))
     throw std::logic_error("Kernel's height must be equal to kernel's width");
   if (kernel.dimension(2) > input.dimension(2))
     throw std::logic_error("Kernel's heigt is bigger than input's");
@@ -55,7 +55,7 @@ Linalg::Tensor<4> Convolution::conv_naive(const Linalg::Tensor<4>& input,
 
 Linalg::Tensor<4> Convolution::conv_im2col(const Linalg::Tensor<4>& input,
                                            const Linalg::Tensor<4>& kernel) {
-  if (kernel.dimension(0) != kernel.dimension(3))
+  if (kernel.dimension(2) != kernel.dimension(3))
     throw std::logic_error("Kernel's height must be equal to kernel's width");
   if (kernel.dimension(2) > input.dimension(2))
     throw std::logic_error("Kernel's heigt is bigger than input's");

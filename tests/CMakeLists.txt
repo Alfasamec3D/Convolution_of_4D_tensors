@@ -36,17 +36,17 @@ gtest_discover_tests(convolution_test)
 find_program(BASH_EXECUTABLE bash REQUIRED)
 file (GLOB testfiles "e2e/io/*.dat")
 foreach (file ${testfiles})
-    add_test(NAME "${file} Naive" 
-        COMMAND bash -c "${CMAKE_SOURCE_DIR}/tests/e2e/run.sh ${file} ./main -n"
+    add_test(NAME "${file}_Naive" 
+        COMMAND bash -c "${CMAKE_SOURCE_DIR}/tests/e2e/run.sh ${file} \"./main -n\""
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
         
     )
-    set_tests_properties("${file} Naive" PROPERTIES DEPENDS main)
+    set_tests_properties("${file}_Naive" PROPERTIES DEPENDS main)
 
-    add_test(NAME "${file} Im2col" 
-        COMMAND bash -c "${CMAKE_SOURCE_DIR}/tests/e2e/run.sh ${file} ./main -im"
+    add_test(NAME "${file}_Im2col" 
+        COMMAND bash -c "${CMAKE_SOURCE_DIR}/tests/e2e/run.sh ${file} \"./main -im\""
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
         
     )
-    set_tests_properties("${file} Im2col" PROPERTIES DEPENDS main)
+    set_tests_properties("${file}_Im2col" PROPERTIES DEPENDS main)
 endforeach()

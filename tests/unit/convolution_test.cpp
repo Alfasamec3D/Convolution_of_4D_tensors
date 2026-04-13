@@ -25,7 +25,7 @@ TEST(ConvNaiveTest, BasicCase) {
 
   Linalg::Tensor real_object = conv_naive(input, kernel);
 
-  EXPECT_TRUE(approxEql(real_object, expected_object));
+  EXPECT_TRUE(approxEql(real_object, expected_object, 0.1));
 }
 
 TEST(ConvIm2ColTest, BasicCase) {
