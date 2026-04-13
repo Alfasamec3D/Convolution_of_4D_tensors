@@ -87,8 +87,8 @@ Linalg::Tensor<4> Convolution::conv_im2col(const Linalg::Tensor<4>& input,
   std::array<size_t, 2> kernel_matrix_dim{C, patch_size};
   std::array<size_t, 2> im_matrix_dim{patch_size, num_patches};
 
+  std::vector<float> im_matrix_vector(length(im_matrix_dim));
   for (size_t n = 0; n < N; ++n) {
-    std::vector<float> im_matrix_vector(length(im_matrix_dim));
 
     for (size_t c = 0; c < C; ++c)
       for (size_t ky = 0; ky < K; ++ky)
